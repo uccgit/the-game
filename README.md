@@ -24,5 +24,6 @@ To Do List:
 - Establish a flow of the game.. Start..Middle...Puzzle...END
 - Show everyone how to use GIT
 - Discuss OOP in Python more indepth
+- etc
 
 >>>>>>> FETCH_HEAD
