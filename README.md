@@ -1,16 +1,12 @@
-<<<<<<< HEAD
-the-game Sandbox Branch
-=======
 
 
 the-game
->>>>>>> master
-========
+
 
 This branch is for testing purposes only. It will be added to the origianl repository once the changes have been verified.
 
 
-<<<<<<< HEAD
+
 =======
 Possible Features:
 - Different Areas To Travel To
@@ -30,4 +26,4 @@ To Do List:
 - Show everyone how to use GIT
 - Discuss OOP in Python more indepth
 
->>>>>>> master
+
