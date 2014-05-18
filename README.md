@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 the-game
 ========
@@ -24,6 +24,9 @@ To Do List:
 - Establish a flow of the game.. Start..Middle...Puzzle...END
 - Show everyone how to use GIT
 - Discuss OOP in Python more indepth
+<<<<<<< HEAD
 - etc
 
 >>>>>>> FETCH_HEAD
+=======
+>>>>>>> 93828b9e3f8253c32ac60b67441f4b038316a046
