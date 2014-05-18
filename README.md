@@ -1,12 +1,17 @@
+<<<<<<< HEAD
+the-game Sandbox Branch
+=======
 
 
 the-game
+>>>>>>> master
 ========
 
-This is our first community project for UnitedCodeClub. A texted based adventure game written in Python 2.7
+This branch is for testing purposes only. It will be added to the origianl repository once the changes have been verified.
 
-Focus: We will be creating a text based adventure game focusing on OOP in Python 2.7.
 
+<<<<<<< HEAD
+=======
 Possible Features:
 - Different Areas To Travel To
 - Different Characters to choose from
@@ -25,3 +30,4 @@ To Do List:
 - Show everyone how to use GIT
 - Discuss OOP in Python more indepth
 
+>>>>>>> master
