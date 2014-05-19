@@ -1,0 +1,6 @@
+This will be for testing purposes ONLY..
+
+All working code should be placed into the SRC directory
+
+Be sure to comment your code so everyone knows what is
+going on!
