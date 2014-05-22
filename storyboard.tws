@@ -1,0 +1,686 @@
+(dp0
+S'buildDestination'
+p1
+V/Users/tootall/Desktop/test.html
+p2
+sS'saveDestination'
+p3
+V/Users/tootall/Desktop/the-game/storyboard.tws
+p4
+sS'target'
+p5
+S'sugarcane'
+p6
+sS'storyPanel'
+p7
+(dp8
+S'widgets'
+p9
+(lp10
+(dp11
+S'selected'
+p12
+I00
+sS'pos'
+p13
+(lp14
+F290.0
+aF1270.0
+asS'passage'
+p15
+(itiddlywiki
+Tiddler
+p16
+(dp18
+S'text'
+p19
+VThe story starts here and there. The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.The story starts here and there.\u000a\u000a
+p20
+sS'title'
+p21
+VStart
+p22
+sS'modified'
+p23
+ctime
+struct_time
+p24
+((I2014
+I5
+I22
+I15
+I7
+I42
+I3
+I142
+I0
+tp25
+(dp26
+tp27
+Rp28
+sS'tags'
+p29
+(lp30
+sS'created'
+p31
+g24
+((I2014
+I5
+I21
+I22
+I41
+I50
+I2
+I141
+I0
+tp32
+(dp33
+tp34
+Rp35
+sbsa(dp36
+g12
+I00
+sg13
+(lp37
+F10.0
+aF1270.0
+asg15
+(itiddlywiki
+Tiddler
+p38
+(dp39
+g19
+VThe Game
+p40
+sg21
+VStoryTitle
+p41
+sg23
+g24
+((I2014
+I5
+I21
+I22
+I43
+I32
+I2
+I141
+I0
+tp42
+(dp43
+tp44
+Rp45
+sg29
+(lp46
+sg31
+g24
+((I2014
+I5
+I21
+I22
+I41
+I50
+I2
+I141
+I0
+tp47
+(dp48
+tp49
+Rp50
+sbsa(dp51
+g12
+I00
+sg13
+(lp52
+F150.0
+aF1270.0
+asg15
+(itiddlywiki
+Tiddler
+p53
+(dp54
+g19
+Vt00tall
+p55
+sg21
+VStoryAuthor
+p56
+sg23
+g24
+((I2014
+I5
+I21
+I22
+I43
+I47
+I2
+I141
+I0
+tp57
+(dp58
+tp59
+Rp60
+sg29
+(lp61
+sg31
+g24
+((I2014
+I5
+I21
+I22
+I41
+I50
+I2
+I141
+I0
+tp62
+(dp63
+tp64
+Rp65
+sbsa(dp66
+g12
+I00
+sg13
+(lp67
+F150.0
+aF10.0
+asg15
+(itiddlywiki
+Tiddler
+p68
+(dp69
+g19
+VThis is the character parent class\u000a\u000aclass Character:\u000a    """Defines an interactive character within the game"""\u000a    def __init__(self):\u000a        self.status = ["normal"]\u000a        self.VITALITY_RATIO = 5\u000a        self.POWER_RATIO = 1.5\u000a        self.name = ""\u000a        self.health = 5\u000a        self.stat_list = [5, 7, 7, 5]\u000a        self.equipment_stat_list = [0, 0, 0, 0]\u000a        self.level = 1\u000a\u000a    def get_max_health(self):\u000a        return ((self.stat_list[3] + self.equipment_stat_list[3]) *\u000a                 self.VITALITY_RATIO)\u000a\u000a    def get_crit_chance(self):\u000a        return (0.1 * ((self.stat_list[1] + self.equipment_stat_list[1]) /\u000a                      ((self.level * 2.0) + 8.0)))\u000a\u000a    def get_armor_reduce(self):\u000a        return (0.1 * ((self.stat_list[2] + self.equipment_stat_list[2]) /\u000a                      ((self.level * 3.0) + 7.0)))\u000a\u000a    def get_attack_damage(self):\u000a        return ((self.stat_list[0] + self.equipment_stat_list[0]) *\u000a                 self.POWER_RATIO)\u000a\u000a    def get_character_sheet(self):\u000a        print "[---Character Sheet---]"\u000a        print "Name: %s (Level: %d)" % (self.name, self.level)\u000a        print "Health: %d/%d" % (self.health, self.get_max_health())\u000a        print "\u005cnPower: %d" % (self.stat_list[0])\u000a        print "Precision: %d" % (self.stat_list[1])\u000a        print "Toughness: %d" % (self.stat_list[2])\u000a        print "Vitality: %d" % (self.stat_list[3])\u000a        print "\u005cnAttack: %d" % (self.get_attack_damage())\u000a        print "Crit Chance: {0:.2f}%".format(100 * self.get_crit_chance())\u000a        print "Armor: {0:.2f}%".format(100 * self.get_armor_reduce())\u000a\u000a    def attack(self, receiver):\u000a        damage = self.get_damage()\u000a        receiver.take_damage(damage)\u000a        print(self.name + " attacked for " + repr(damage) +\u000a              " (-{})".format(round(damage * receiver.get_armor_reduce())))\u000a\u000a    def take_damage(self, damage):\u000a        damage -= round(damage * self.get_armor_reduce())\u000a        self.health -= round(damage)\u000a        if self.health <= 0:\u000a            self.status.append("dead")\u000a            self.health = 0\u000a\u000a    def get_damage(self):\u000a        damage = self.get_attack_damage()\u000a        if random() <= self.get_crit_chance():\u000a            print "CRITICAL STRIKE!!!"\u000a            damage *= 2\u000a        return round(damage)\u000a\u000a[[Player |Player]]\u000a[[Enemy |Enemy]]
+p70
+sg21
+VCharacter
+p71
+sg23
+g24
+((I2014
+I5
+I22
+I14
+I57
+I56
+I3
+I142
+I0
+tp72
+(dp73
+tp74
+Rp75
+sg29
+(lp76
+sg31
+g24
+((I2014
+I5
+I21
+I22
+I43
+I54
+I2
+I141
+I0
+tp77
+(dp78
+tp79
+Rp80
+sbsa(dp81
+g12
+I00
+sg13
+(lp82
+F10.0
+aF150.0
+asg15
+(itiddlywiki
+Tiddler
+p83
+(dp84
+g19
+VThis is the player class\u000a\u000aclass Player(Character):\u000a    """Player object"""\u000a    def __init__(self, playername):\u000a        Character.__init__(self)\u000a        self.name = playername\u000a        self.level = 1\u000a        self.gold = 0\u000a        self.exp = 0\u000a        self.exp_needed = 1000\u000a        self.stat_list = [10, 10, 10, 10]\u000a        self.equipment_stat_list = [0, 0, 0, 0]\u000a        self.inventory = []\u000a        self.armor = {"Helm": None, "Coat": None, "Gloves": None,\u000a                      "Leggings": None, "Boots": None}\u000a        self.weapons = {"Right Hand": items.Sword("Rusty Sword", [0, 0, 0, 0])}\u000a        self.health = self.get_max_health()\u000a\u000a    def give_exp(self, exp_earned):\u000a        """Gives the player exp_earned experience and checks for level up"""\u000a        print self.name + " gained " + repr(exp_earned) + " experience!"\u000a        self.exp += exp_earned\u000a        self.check_level_up()\u000a\u000a    def give_health(self, given_health):\u000a        self.health += given_health\u000a        if self.health > self.get_max_health():\u000a            self.health = self.get_max_health()\u000a        if "dead" in self.status:\u000a            self.status.remove("dead")\u000a\u000a    def give_gold(self, gold_earned):\u000a        print self.name + " gained " + repr(gold_earned) + " gold!"\u000a        self.gold += gold_earned\u000a\u000a    def take_gold(self, gold_taken=0):\u000a        if self.gold < gold_taken:\u000a            print "You do not have enough gold!"\u000a            return False\u000a        else:\u000a            self.gold -= gold_taken\u000a            print self.name + " lost " + repr(gold_taken) + " gold!"\u000a            return True\u000a\u000a    def give_item(self, item):\u000a        """Checks to see if inventory has space and gives item to player"""\u000a        print self.name + " recieved a " + item.name + "!"\u000a        if len(self.inventory) <= 10:\u000a            self.inventory.append(item)\u000a        else:\u000a            print "Inventory is full!"\u000a\u000a    def get_inventory(self, accessed_from="zone"):\u000a        """Displays inventory and options"""\u000a        if len(self.inventory) == 0:\u000a            raw_input("Your inventory is empty.\u005cn" +\u000a                      "Press enter to continue...")\u000a            return\u000a\u000a        while True:\u000a            # Clearers should be removed from game.py if they're called here.\u000a            os.system("cls" if os.name == "nt" else "clear")\u000a            if len(self.inventory) == 1:\u000a                print "You are carrying {} item.\u005cn".format(len(self.inventory))\u000a            else:\u000a                print ("You are carrying " "{} items.\u005cn".format(len(self.inventory)))\u000a            print "Inventory:"\u000a            for i, x in enumerate(self.inventory):\u000a                print "{}) {}".format(i + 1, x.name)\u000a            print "{}) Exit".format(i + 2)\u000a            try:\u000a                choice = int(raw_input("\u005cnSelection: ")) - 1\u000a            except ValueError:\u000a                continue\u000a            if choice <= i and choice >= 0:\u000a                os.system("cls" if os.name == "nt" else "clear")\u000a                option = self.inventory[choice].get_options(accessed_from)\u000a\u000a                if option == "equip":\u000a                    if isinstance(self.inventory[choice], items.Armor):\u000a                        self.equip(self.inventory[choice],\u000a                                   self.armor,\u000a                                   accessed_from)\u000a                    elif isinstance(self.inventory[choice], items.Weapon):\u000a                        self.equip(self.inventory[choice],\u000a                                   self.weapons,\u000a                                   accessed_from)\u000a                    else:\u000a                        print "Type Check Error"\u000a                    self.update_equipment_stats()\u000a                    break\u000a                elif option == "consume":\u000a                    self.inventory.pop(choice).use(self)\u000a                    raw_input("Press \u005c"Enter\u005c" to continue...")\u000a                    break\u000a                elif option == "compare":\u000a                    if isinstance(self.inventory[choice], items.Armor):\u000a                        if self.armor.get(\u000a                           self.inventory[choice].slot) is not None:\u000a                            self.compare_equip(self.inventory[choice],\u000a                                                  self.armor.get(\u000a                                                  self.inventory[choice].slot),\u000a                                              accessed_from)\u000a                        else:\u000a                            print "No existing item to compare!"\u000a                            raw_input("Press \u005c"Enter\u005c" to continue...")\u000a                    elif isinstance(self.inventory[choice], items.Weapon):\u000a                        if self.weapons.get(\u000a                           self.inventory[choice].slot) is not None:\u000a                            self.compare_equip(self.inventory[choice],\u000a                                 self.weapons.get(self.inventory[choice].slot),\u000a                                 accessed_from)\u000a                        else:\u000a                            print "No existing item to compare!"\u000a                            raw_input("Press \u005c"Enter\u005c" to continue...")\u000a                    self.update_equipment_stats()\u000a\u000a                elif option == "destroy":\u000a                    self.inventory.pop(choice)\u000a\u000a            elif choice == i + 1:\u000a                break\u000a            else:\u000a                continue\u000a\u000a    def attack(self, receiver):\u000a        self.weapons.get("Right Hand").attack(self, receiver)\u000a\u000a    def equip(self, new, type_dict, accessed_from="zone"):\u000a        if type_dict.get(new.slot) is not None:\u000a            self.compare_equip(new, type_dict.get(new.slot))\u000a        else:\u000a            type_dict[new.slot] = self.inventory.pop(self.inventory.index(new))\u000a            if accessed_from == "combat":\u000a                self.status.append("skip")\u000a\u000a    def compare_equip(self, new, cur, accessed_from="zone"):\u000a        """Compares attributes of existing item with a new item"""\u000a        while True:\u000a            os.system("cls" if os.name == "nt" else "clear")\u000a            STAT_WIDTH = 12\u000a            CUR_NAME_WIDTH = len(cur.name) + 2\u000a            NEW_NAME_WIDTH = len(new.name) + 2\u000a            WIDTH = 4\u000a            print "".join(("Stat".ljust(STAT_WIDTH),\u000a                           "New".ljust(NEW_NAME_WIDTH),\u000a                           "Current".ljust(CUR_NAME_WIDTH),\u000a                           "Difference".ljust(WIDTH)))\u000a\u000a            print "".join(("Name".ljust(STAT_WIDTH),\u000a                           new.name.ljust(NEW_NAME_WIDTH),\u000a                           cur.name.ljust(CUR_NAME_WIDTH)))\u000a\u000a            print "".join(("Power".ljust(STAT_WIDTH),\u000a                           str(new.stats[0]).ljust(NEW_NAME_WIDTH),\u000a                           str(cur.stats[0]).ljust(CUR_NAME_WIDTH),\u000a                           str(new.stats[0] - cur.stats[0]).ljust(WIDTH)))\u000a\u000a            print "".join(("Precision".ljust(STAT_WIDTH),\u000a                           str(new.stats[1]).ljust(NEW_NAME_WIDTH),\u000a                           str(cur.stats[1]).ljust(CUR_NAME_WIDTH),\u000a                           str(new.stats[1] - cur.stats[1]).ljust(WIDTH)))\u000a\u000a            print "".join(("Toughness".ljust(STAT_WIDTH),\u000a                           str(new.stats[2]).ljust(NEW_NAME_WIDTH),\u000a                           str(cur.stats[2]).ljust(CUR_NAME_WIDTH),\u000a                           str(new.stats[2] - cur.stats[2]).ljust(WIDTH)))\u000a\u000a            print "".join(("Vitality".ljust(STAT_WIDTH),\u000a                           str(new.stats[3]).ljust(NEW_NAME_WIDTH),\u000a                           str(cur.stats[3]).ljust(CUR_NAME_WIDTH),\u000a                           str(new.stats[3] - cur.stats[3]).ljust(WIDTH)))\u000a            choice = raw_input("\u005cnEquip " + new.name + "? (Y/N)").lower()\u000a            if choice == 'y':\u000a                if isinstance(new, items.Armor):\u000a                    self.armor[new.slot] = self.inventory \u005c\u000a                                                .pop(self.inventory.index(new))\u000a                elif isinstance(new, items.Weapon):\u000a                    self.weapons[new.slot] = self.inventory \u005c\u000a                                              .pop(self.inventory.index(new))\u000a                if accessed_from == "combat":\u000a                    self.status.append("skip")\u000a                break\u000a            elif choice == 'n':\u000a                os.system("cls" if os.name == "nt" else "clear")\u000a                break\u000a\u000a    def update_equipment_stats(self):\u000a        """Updates equipment stats after changing equipment"""\u000a        for i in range(len(self.equipment_stat_list)):\u000a            tmp_amount = 0\u000a            for x in self.armor.itervalues():\u000a                if x is not None:\u000a                    tmp_amount += x.stats[i]\u000a                else:\u000a                    tmp_amount += 0\u000a            for x in self.weapons.itervalues():\u000a                if x is not None:\u000a                    tmp_amount += x.stats[i]\u000a                else:\u000a                    tmp_amount += 0\u000a            self.equipment_stat_list[i] = tmp_amount\u000a\u000a    def check_level_up(self):\u000a        """Checks to see if enough experience has been gained to level up"""\u000a        level_gain = 0\u000a        while self.exp >= self.exp_needed:\u000a            print "\u005cnLevel up!!!"\u000a            self.level += 1\u000a            self.exp -= self.exp_needed\u000a            self.exp_needed += self.level * 100\u000a            level_gain += 1\u000a        if level_gain > 0:\u000a            raw_input("Press \u005c"Enter\u005c" to continue...")\u000a            os.system("cls" if os.name == "nt" else "clear")\u000a            self.level_up(level_gain)\u000a\u000a    def level_up(self, level_gain):\u000a        """Allocate points to attributes"""\u000a        points_gain = level_gain * 5\u000a        while points_gain != 0:\u000a\u000a            print "Points available: ", points_gain\u000a            print "[------------------]"\u000a            print "(1) Power: ", self.stat_list[0]\u000a            print "(2) Precision: ", self.stat_list[1]\u000a            print "(3) Toughness: ", self.stat_list[2]\u000a            print "(4) Vitality: ", self.stat_list[3]\u000a            choice = raw_input("Place point into: ")\u000a            if choice == '1':\u000a                self.stat_list[0] += 1\u000a            elif choice == '2':\u000a                self.stat_list[1] += 1\u000a            elif choice == '3':\u000a                self.stat_list[2] += 1\u000a            elif choice == '4':\u000a                self.stat_list[3] += 1\u000a            else:\u000a                continue\u000a                os.system("cls" if os.name == "nt" else "clear")\u000a            points_gain -= 1\u000a            self.health = self.get_max_health()\u000a            os.system("cls" if os.name == "nt" else "clear")\u000a\u000a    def get_character_sheet(self):\u000a        print "[---Character Sheet---]"\u000a        print "Name: %s (Level: %d)" % (self.name, self.level)\u000a        print "Health: %d/%d" % (self.health, self.get_max_health())\u000a        print "Gold: %d" % (self.gold)\u000a        print "Exp: %d/%d" % (self.exp, self.exp_needed)\u000a        print "\u005cnPower: {} (+{})".format(self.stat_list[0] +\u000a                                         self.equipment_stat_list[0],\u000a                                         self.equipment_stat_list[0])\u000a        print "Precision: {} (+{})".format(self.equipment_stat_list[1],\u000a                                           self.equipment_stat_list[1])\u000a        print "Toughness: {} (+{})".format(self.stat_list[2] +\u000a                                           self.equipment_stat_list[2],\u000a                                           self.equipment_stat_list[2])\u000a        print "Vitality: {} (+{})".format(self.stat_list[3] +\u000a                                          self.equipment_stat_list[3],\u000a                                          self.equipment_stat_list[3])\u000a        print "\u005cnAttack: %d" % (self.get_attack_damage())\u000a        print "Crit Chance: {0:.2f}%".format(100 * self.get_crit_chance())\u000a        print "Armor: {0:.2f}%".format(100 * self.get_armor_reduce())\u000a\u000a        print "\u005cn[------Equipment-----]"\u000a        for x in self.armor.iterkeys():\u000a            if self.armor.get(x) != None:\u000a                name = self.armor.get(x).name\u000a            else:\u000a                name = "None"\u000a            print "{}: {}".format(x, name)\u000a\u000a        print ""\u000a        for x in self.weapons.iterkeys():\u000a            if self.weapons.get(x) is not None:\u000a                name = self.weapons.get(x).name\u000a            else:\u000a                name = "None"\u000a            print "{}: {}".format(x, name)\u000a\u000a[[Character |Character]]
+p85
+sg21
+VPlayer
+p86
+sg23
+g24
+((I2014
+I5
+I22
+I15
+I2
+I5
+I3
+I142
+I0
+tp87
+(dp88
+tp89
+Rp90
+sg29
+(lp91
+sg31
+g24
+((I2014
+I5
+I21
+I23
+I4
+I49
+I2
+I141
+I0
+tp92
+(dp93
+tp94
+Rp95
+sbsa(dp96
+g12
+I00
+sg13
+(lp97
+F290.0
+aF150.0
+asg15
+(itiddlywiki
+Tiddler
+p98
+(dp99
+g19
+VEnemy Class\u000a\u000aclass Enemy(Character):\u000a    """Enemy object"""\u000a    def __init__(self, name, stats, level):\u000a        Character.__init__(self)\u000a        self.name = name\u000a        self.level = level\u000a        self.stat_weights = stats\u000a        self.init_level(level * 5)\u000a        self.health = self.get_max_health()\u000a\u000a    def init_level(self, level):\u000a        pass\u000a\u000a[[Character |Character]]
+p100
+sg21
+VEnemy
+p101
+sg23
+g24
+((I2014
+I5
+I22
+I15
+I1
+I41
+I3
+I142
+I0
+tp102
+(dp103
+tp104
+Rp105
+sg29
+(lp106
+sg31
+g24
+((I2014
+I5
+I21
+I23
+I4
+I53
+I2
+I141
+I0
+tp107
+(dp108
+tp109
+Rp110
+sbsa(dp111
+g12
+I00
+sg13
+(lp112
+F150.0
+aF290.0
+asg15
+(itiddlywiki
+Tiddler
+p113
+(dp114
+g19
+VWhen They Fight\u000a\u000a[[Player |Player]]\u000a[[Enemy |Enemy]]\u000a\u000a[[CombatResult |CombatResult]]\u000a
+p115
+sg21
+VCombat
+p116
+sg23
+g24
+((I2014
+I5
+I21
+I23
+I12
+I31
+I2
+I141
+I0
+tp117
+(dp118
+tp119
+Rp120
+sg29
+(lp121
+sg31
+g24
+((I2014
+I5
+I21
+I23
+I9
+I50
+I2
+I141
+I0
+tp122
+(dp123
+tp124
+Rp125
+sbsa(dp126
+g12
+I00
+sg13
+(lp127
+F150.0
+aF430.0
+asg15
+(itiddlywiki
+Tiddler
+p128
+(dp129
+g19
+VResults
+p130
+sg21
+VCombatResult
+p131
+sg23
+g24
+((I2014
+I5
+I21
+I23
+I12
+I9
+I2
+I141
+I0
+tp132
+(dp133
+tp134
+Rp135
+sg29
+(lp136
+sg31
+g24
+((I2014
+I5
+I21
+I23
+I10
+I55
+I2
+I141
+I0
+tp137
+(dp138
+tp139
+Rp140
+sbsa(dp141
+g12
+I00
+sg13
+(lp142
+F1270.0
+aF10.0
+asg15
+(itiddlywiki
+Tiddler
+p143
+(dp144
+g19
+VInventory Class goes here\u000a\u000a[[Items |Items]]\u000a[[Market |Market]]\u000a[[Weapons |Weapons]]
+p145
+sg21
+VInventory
+p146
+sg23
+g24
+((I2014
+I5
+I22
+I15
+I6
+I21
+I3
+I142
+I0
+tp147
+(dp148
+tp149
+Rp150
+sg29
+(lp151
+sg31
+g24
+((I2014
+I5
+I22
+I15
+I2
+I45
+I3
+I142
+I0
+tp152
+(dp153
+tp154
+Rp155
+sbsa(dp156
+g12
+I00
+sg13
+(lp157
+F1130.0
+aF150.0
+asg15
+(itiddlywiki
+Tiddler
+p158
+(dp159
+g19
+VItems to be defined\u000a\u000a[[Inventory |Inventory]]
+p160
+sg21
+VItems
+p161
+sg23
+g24
+((I2014
+I5
+I22
+I15
+I5
+I17
+I3
+I142
+I0
+tp162
+(dp163
+tp164
+Rp165
+sg29
+(lp166
+sg31
+g24
+((I2014
+I5
+I22
+I15
+I3
+I30
+I3
+I142
+I0
+tp167
+(dp168
+tp169
+Rp170
+sbsa(dp171
+g12
+I00
+sg13
+(lp172
+F1410.0
+aF150.0
+asg15
+(itiddlywiki
+Tiddler
+p173
+(dp174
+g19
+VWeapons class\u000a\u000a\u000a[[Inventory |Inventory]]
+p175
+sg21
+VWeapons
+p176
+sg23
+g24
+((I2014
+I5
+I22
+I15
+I5
+I35
+I3
+I142
+I0
+tp177
+(dp178
+tp179
+Rp180
+sg29
+(lp181
+sg31
+g24
+((I2014
+I5
+I22
+I15
+I3
+I50
+I3
+I142
+I0
+tp182
+(dp183
+tp184
+Rp185
+sbsa(dp186
+g12
+I00
+sg13
+(lp187
+F1270.0
+aF150.0
+asg15
+(itiddlywiki
+Tiddler
+p188
+(dp189
+g19
+VMarket Items Class\u000a\u000a[[Inventory |Inventory]]
+p190
+sg21
+VMarket
+p191
+sg23
+g24
+((I2014
+I5
+I22
+I15
+I5
+I28
+I3
+I142
+I0
+tp192
+(dp193
+tp194
+Rp195
+sg29
+(lp196
+sg31
+g24
+((I2014
+I5
+I22
+I15
+I4
+I15
+I3
+I142
+I0
+tp197
+(dp198
+tp199
+Rp200
+sbsa(dp201
+g12
+I00
+sg13
+(lp202
+F710.0
+aF10.0
+asg15
+(itiddlywiki
+Tiddler
+p203
+(dp204
+g19
+VAll Modules should link to this passage to keep things organized\u000a\u000a[[Character |Character]]\u000a[[Inventory |Inventory]]
+p205
+sg21
+VModules
+p206
+sg23
+g24
+((I2014
+I5
+I22
+I15
+I11
+I16
+I3
+I142
+I0
+tp207
+(dp208
+tp209
+Rp210
+sg29
+(lp211
+sg31
+g24
+((I2014
+I5
+I22
+I15
+I10
+I12
+I3
+I142
+I0
+tp212
+(dp213
+tp214
+Rp215
+sbsasS'scale'
+p216
+F0.8
+sS'snapping'
+p217
+I01
+ss.
