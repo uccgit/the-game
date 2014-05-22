@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="8df2a536-743e-468b-a2f8-ea2038b8abe7" name="Default" comment="" />
+=======
+    <list default="true" id="8df2a536-743e-468b-a2f8-ea2038b8abe7" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Character/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Menu/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/World/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/area.py" afterPath="$PROJECT_DIR$/src/World/area.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/character.py" afterPath="$PROJECT_DIR$/src/Character/character.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/menu.py" afterPath="$PROJECT_DIR$/src/Menu/menu.py" />
+    </list>
+>>>>>>> master
     <ignored path="the-game.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,12 +41,57 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="character.py" pinned="false" current="true" current-in-tab="true">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/character.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="98" column="76" selection-start="3357" selection-end="3357" vertical-scroll-proportion="2.5405405" vertical-offset="60" max-vertical-offset="5475">
               <folding>
                 <element signature="e#22#47#0" expanded="true" />
               </folding>
+=======
+        <entry file="file://$PROJECT_DIR$/src/Character/character.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="93" column="51" selection-start="3119" selection-end="3119" vertical-scroll-proportion="2.0820897" vertical-offset="0" max-vertical-offset="5475">
+              <folding>
+                <element signature="e#22#47#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="items.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Downloads/the-first-fantasy-master/FirstFantasy/src/items.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="83" column="0" selection-start="2658" selection-end="2658" vertical-scroll-proportion="0.0" vertical-offset="1325" max-vertical-offset="1995">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Menu/menu.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="0" selection-start="864" selection-end="864" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1080">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="area.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/World/area.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="0" selection-start="734" selection-end="734" vertical-scroll-proportion="0.0" vertical-offset="5" max-vertical-offset="675">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testing.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/testing.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="9" selection-start="164" selection-end="164" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="165">
+              <folding />
+>>>>>>> master
             </state>
           </provider>
         </entry>
@@ -56,13 +113,21 @@
         <option value="$PROJECT_DIR$/src/menu.py" />
         <option value="$PROJECT_DIR$/src/area.py" />
         <option value="$PROJECT_DIR$/src/character.py" />
+<<<<<<< HEAD
+=======
+        <option value="$USER_HOME$/Downloads/the-first-fantasy-master/FirstFantasy/src/items.py" />
+>>>>>>> master
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1440" />
+<<<<<<< HEAD
     <option name="height" value="698" />
+=======
+    <option name="height" value="813" />
+>>>>>>> master
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -128,7 +193,11 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ucchowto/exercises" />
+=======
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/the-first-fantasy-master/FirstFantasy/src/items.py" />
+>>>>>>> master
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="vcs.Git" />
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -141,7 +210,18 @@
       <console-settings />
     </option>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Python.character">
+=======
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Menu" />
+      <recent name="$PROJECT_DIR$/src/World" />
+      <recent name="$PROJECT_DIR$/src/Character" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.area">
+>>>>>>> master
     <configuration default="false" name="menu" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -155,7 +235,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="the-game" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/menu.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Menu/menu.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
@@ -174,7 +254,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="the-game" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/area.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/World/area.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
@@ -372,6 +452,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="0" y="22" width="1440" height="698" extended-state="0" />
     <editor active="true" />
     <layout>
@@ -385,11 +466,30 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32855093" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+=======
+    <frame x="0" y="22" width="1440" height="813" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.79483503" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24926254" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24892704" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294964" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+>>>>>>> master
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+>>>>>>> master
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -412,6 +512,7 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/character.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="80" column="0" selection-start="2635" selection-end="14851" vertical-scroll-proportion="0.0" vertical-offset="1185" max-vertical-offset="5475">
@@ -433,11 +534,54 @@
     <entry file="file://$PROJECT_DIR$/src/menu.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="0" selection-start="864" selection-end="864" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="1080">
+=======
+    <entry file="file://$PROJECT_DIR$/src/Menu/menu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="864" selection-end="864" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="1080">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/area.py">
+    <entry file="file://$PROJECT_DIR$/src/World/area.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="734" selection-end="734" vertical-scroll-proportion="0.0" vertical-offset="7" max-vertical-offset="675">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/testing.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="9" selection-start="164" selection-end="164" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="165">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/testing.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="9" selection-start="164" selection-end="164" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/the-first-fantasy-master/FirstFantasy/src/zone.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1185" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/the-first-fantasy-master/FirstFantasy/src/world.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1695" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Menu/menu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="864" selection-end="864" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1080">
+>>>>>>> master
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/World/area.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="0" selection-start="734" selection-end="734" vertical-scroll-proportion="0.0" vertical-offset="7" max-vertical-offset="675" />
       </provider>
@@ -472,16 +616,26 @@
         <state line="343" column="71" selection-start="0" selection-end="15010" vertical-scroll-proportion="0.35074627" vertical-offset="4865" max-vertical-offset="5535" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/menu.py">
+    <entry file="file://$USER_HOME$/Downloads/the-first-fantasy-master/FirstFantasy/src/items.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state line="27" column="0" selection-start="864" selection-end="864" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="1080">
+=======
+        <state line="83" column="0" selection-start="2658" selection-end="2658" vertical-scroll-proportion="0.0" vertical-offset="1325" max-vertical-offset="1995">
+>>>>>>> master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/character.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="98" column="76" selection-start="3357" selection-end="3357" vertical-scroll-proportion="2.5405405" vertical-offset="60" max-vertical-offset="5475">
+=======
+    <entry file="file://$PROJECT_DIR$/src/Character/character.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="51" selection-start="3119" selection-end="3119" vertical-scroll-proportion="2.0820897" vertical-offset="0" max-vertical-offset="5475">
+>>>>>>> master
           <folding>
             <element signature="e#22#47#0" expanded="true" />
           </folding>
