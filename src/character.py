@@ -90,8 +90,8 @@ class Player(Character):
         self.stat_list = [10, 10, 10, 10]
         self.equipment_stat_list = [0, 0, 0, 0]
         self.inventory = []
-        self.armor = {"Helm": None, "Coat": None, "Gloves": None,
-                      "Leggings": None, "Boots": None}
+        self.armor = {"Hat": None, "Jacket": None, "Gloves": None,
+                      "Pants": None, "Shoes": None}
         self.weapons = {"Right Hand": items.Sword("Rusty Sword", [0, 0, 0, 0])}
         self.health = self.get_max_health()
 

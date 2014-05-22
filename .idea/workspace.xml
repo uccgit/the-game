@@ -32,10 +32,19 @@
       <file leaf-file-name="character.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/character.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="139" column="66" selection-start="4816" selection-end="4816" vertical-scroll-proportion="3.1119404" vertical-offset="0" max-vertical-offset="5475">
+            <state line="93" column="51" selection-start="3119" selection-end="3119" vertical-scroll-proportion="2.0820897" vertical-offset="0" max-vertical-offset="5475">
               <folding>
                 <element signature="e#22#47#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="items.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Downloads/the-first-fantasy-master/FirstFantasy/src/items.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="83" column="0" selection-start="2658" selection-end="2658" vertical-scroll-proportion="0.0" vertical-offset="1325" max-vertical-offset="1995">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -84,6 +93,7 @@
         <option value="$PROJECT_DIR$/src/menu.py" />
         <option value="$PROJECT_DIR$/src/area.py" />
         <option value="$PROJECT_DIR$/src/character.py" />
+        <option value="$USER_HOME$/Downloads/the-first-fantasy-master/FirstFantasy/src/items.py" />
       </list>
     </option>
   </component>
@@ -170,7 +180,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/the-first-fantasy-master/FirstFantasy/src/world.py" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/the-first-fantasy-master/FirstFantasy/src/items.py" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="vcs.Git" />
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -485,9 +495,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Downloads/the-first-fantasy-master/FirstFantasy/src/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="0" selection-start="2658" selection-end="2658" vertical-scroll-proportion="0.0" vertical-offset="1325" max-vertical-offset="1995">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/character.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="139" column="66" selection-start="4816" selection-end="4816" vertical-scroll-proportion="3.1119404" vertical-offset="0" max-vertical-offset="5475">
+        <state line="93" column="51" selection-start="3119" selection-end="3119" vertical-scroll-proportion="2.0820897" vertical-offset="0" max-vertical-offset="5475">
           <folding>
             <element signature="e#22#47#0" expanded="true" />
           </folding>
