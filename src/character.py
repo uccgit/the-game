@@ -7,8 +7,8 @@ class Character:
     """Defines an interactive character within the game"""
     def __init__(self):
         self.status = ["normal"]
-        self.VITALITY_RATIO = 5
-        self.POWER_RATIO = 1.5
+        self.vitality_ratio = 5
+        self.power_ratio = 1.5
         self.name = ""
         self.health = 5
         self.stat_list = [5, 7, 7, 5]
@@ -17,7 +17,7 @@ class Character:
 
     def get_max_health(self):
         return ((self.stat_list[3] + self.equipment_stat_list[3]) *
-                 self.VITALITY_RATIO)
+                 self.vitality_ratio)
 
     def get_crit_chance(self):
         return (0.1 * ((self.stat_list[1] + self.equipment_stat_list[1]) /
@@ -29,7 +29,7 @@ class Character:
 
     def get_attack_damage(self):
         return ((self.stat_list[0] + self.equipment_stat_list[0]) *
-                 self.POWER_RATIO)
+                 self.power_ratio)
 
     def get_character_sheet(self):
         print "[---Character Sheet---]"
@@ -80,9 +80,9 @@ class Enemy(Character):
 
 class Player(Character):
     """Player object"""
-    def __init__(self, playername):
+    def __init__(self, player_name):
         Character.__init__(self)
-        self.name = playername
+        self.name = player_name
         self.level = 1
         self.gold = 0
         self.exp = 0
@@ -137,7 +137,7 @@ class Player(Character):
             return
 
         while True:
-            # Clearers should be removed from game.py if they're called here.
+            # Main Character Loop. Going to split this up later on
             os.system("cls" if os.name == "nt" else "clear")
             if len(self.inventory) == 1:
                 print "You are carrying {} item.\n".format(len(self.inventory))
