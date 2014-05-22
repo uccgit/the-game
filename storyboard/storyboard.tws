@@ -190,7 +190,7 @@ Tiddler
 p68
 (dp69
 g19
-VThis is the character parent class\u000a\u000aclass Character:\u000a    """Defines an interactive character within the game"""\u000a    def __init__(self):\u000a        self.status = ["normal"]\u000a        self.VITALITY_RATIO = 5\u000a        self.POWER_RATIO = 1.5\u000a        self.name = ""\u000a        self.health = 5\u000a        self.stat_list = [5, 7, 7, 5]\u000a        self.equipment_stat_list = [0, 0, 0, 0]\u000a        self.level = 1\u000a\u000a    def get_max_health(self):\u000a        return ((self.stat_list[3] + self.equipment_stat_list[3]) *\u000a                 self.VITALITY_RATIO)\u000a\u000a    def get_crit_chance(self):\u000a        return (0.1 * ((self.stat_list[1] + self.equipment_stat_list[1]) /\u000a                      ((self.level * 2.0) + 8.0)))\u000a\u000a    def get_armor_reduce(self):\u000a        return (0.1 * ((self.stat_list[2] + self.equipment_stat_list[2]) /\u000a                      ((self.level * 3.0) + 7.0)))\u000a\u000a    def get_attack_damage(self):\u000a        return ((self.stat_list[0] + self.equipment_stat_list[0]) *\u000a                 self.POWER_RATIO)\u000a\u000a    def get_character_sheet(self):\u000a        print "[---Character Sheet---]"\u000a        print "Name: %s (Level: %d)" % (self.name, self.level)\u000a        print "Health: %d/%d" % (self.health, self.get_max_health())\u000a        print "\u005cnPower: %d" % (self.stat_list[0])\u000a        print "Precision: %d" % (self.stat_list[1])\u000a        print "Toughness: %d" % (self.stat_list[2])\u000a        print "Vitality: %d" % (self.stat_list[3])\u000a        print "\u005cnAttack: %d" % (self.get_attack_damage())\u000a        print "Crit Chance: {0:.2f}%".format(100 * self.get_crit_chance())\u000a        print "Armor: {0:.2f}%".format(100 * self.get_armor_reduce())\u000a\u000a    def attack(self, receiver):\u000a        damage = self.get_damage()\u000a        receiver.take_damage(damage)\u000a        print(self.name + " attacked for " + repr(damage) +\u000a              " (-{})".format(round(damage * receiver.get_armor_reduce())))\u000a\u000a    def take_damage(self, damage):\u000a        damage -= round(damage * self.get_armor_reduce())\u000a        self.health -= round(damage)\u000a        if self.health <= 0:\u000a            self.status.append("dead")\u000a            self.health = 0\u000a\u000a    def get_damage(self):\u000a        damage = self.get_attack_damage()\u000a        if random() <= self.get_crit_chance():\u000a            print "CRITICAL STRIKE!!!"\u000a            damage *= 2\u000a        return round(damage)\u000a\u000a[[Player |Player]]\u000a[[Enemy |Enemy]]
+VThis is the character parent class\u000a\u000aclass Character:\u000a    """Defines an interactive character within the game"""\u000a    def __init__(self):\u000a        self.status = ["normal"]\u000a        self.VITALITY_RATIO = 5\u000a        self.POWER_RATIO = 1.5\u000a        self.name = ""\u000a        self.health = 5\u000a        self.stat_list = [5, 7, 7, 5]\u000a        self.equipment_stat_list = [0, 0, 0, 0]\u000a        self.level = 1\u000a\u000a    def get_max_health(self):\u000a        return ((self.stat_list[3] + self.equipment_stat_list[3]) *\u000a                 self.VITALITY_RATIO)\u000a\u000a    def get_crit_chance(self):\u000a        return (0.1 * ((self.stat_list[1] + self.equipment_stat_list[1]) /\u000a                      ((self.level * 2.0) + 8.0)))\u000a\u000a    def get_armor_reduce(self):\u000a        return (0.1 * ((self.stat_list[2] + self.equipment_stat_list[2]) /\u000a                      ((self.level * 3.0) + 7.0)))\u000a\u000a    def get_attack_damage(self):\u000a        return ((self.stat_list[0] + self.equipment_stat_list[0]) *\u000a                 self.POWER_RATIO)\u000a\u000a    def get_character_sheet(self):\u000a        print "[---Character Sheet---]"\u000a        print "Name: %s (Level: %d)" % (self.name, self.level)\u000a        print "Health: %d/%d" % (self.health, self.get_max_health())\u000a        print "\u005cnPower: %d" % (self.stat_list[0])\u000a        print "Precision: %d" % (self.stat_list[1])\u000a        print "Toughness: %d" % (self.stat_list[2])\u000a        print "Vitality: %d" % (self.stat_list[3])\u000a        print "\u005cnAttack: %d" % (self.get_attack_damage())\u000a        print "Crit Chance: {0:.2f}%".format(100 * self.get_crit_chance())\u000a        print "Armor: {0:.2f}%".format(100 * self.get_armor_reduce())\u000a\u000a    def attack(self, receiver):\u000a        damage = self.get_damage()\u000a        receiver.take_damage(damage)\u000a        print(self.name + " attacked for " + repr(damage) +\u000a              " (-{})".format(round(damage * receiver.get_armor_reduce())))\u000a\u000a    def take_damage(self, damage):\u000a        damage -= round(damage * self.get_armor_reduce())\u000a        self.health -= round(damage)\u000a        if self.health <= 0:\u000a            self.status.append("dead")\u000a            self.health = 0\u000a\u000a    def get_damage(self):\u000a        damage = self.get_attack_damage()\u000a        if random() <= self.get_crit_chance():\u000a            print "CRITICAL STRIKE!!!"\u000a            damage *= 2\u000a        return round(damage)\u000a\u000a[[Player |Player]]\u000a[[Enemy |Enemy]]\u000a[[NPC |NPC]]
 p70
 sg21
 VCharacter
@@ -200,9 +200,9 @@ g24
 ((I2014
 I5
 I22
-I14
-I57
+I19
 I56
+I51
 I3
 I142
 I0
@@ -332,29 +332,29 @@ g12
 I00
 sg13
 (lp112
-F150.0
-aF290.0
+F1270.0
+aF10.0
 asg15
 (itiddlywiki
 Tiddler
 p113
 (dp114
 g19
-VWhen They Fight\u000a\u000a[[Player |Player]]\u000a[[Enemy |Enemy]]\u000a\u000a[[CombatResult |CombatResult]]\u000a
+VInventory Class goes here\u000a\u000a[[Items |Items]]\u000a[[Market |Market]]\u000a[[Weapons |Weapons]]
 p115
 sg21
-VCombat
+VInventory
 p116
 sg23
 g24
 ((I2014
 I5
+I22
+I15
+I6
 I21
-I23
-I12
-I31
-I2
-I141
+I3
+I142
 I0
 tp117
 (dp118
@@ -366,12 +366,12 @@ sg31
 g24
 ((I2014
 I5
-I21
-I23
-I9
-I50
+I22
+I15
 I2
-I141
+I45
+I3
+I142
 I0
 tp122
 (dp123
@@ -382,29 +382,29 @@ g12
 I00
 sg13
 (lp127
-F150.0
-aF430.0
+F1130.0
+aF150.0
 asg15
 (itiddlywiki
 Tiddler
 p128
 (dp129
 g19
-VResults
+VItems to be defined\u000a\u000a[[Inventory |Inventory]]
 p130
 sg21
-VCombatResult
+VItems
 p131
 sg23
 g24
 ((I2014
 I5
-I21
-I23
-I12
-I9
-I2
-I141
+I22
+I15
+I5
+I17
+I3
+I142
 I0
 tp132
 (dp133
@@ -416,12 +416,12 @@ sg31
 g24
 ((I2014
 I5
-I21
-I23
-I10
-I55
-I2
-I141
+I22
+I15
+I3
+I30
+I3
+I142
 I0
 tp137
 (dp138
@@ -432,18 +432,18 @@ g12
 I00
 sg13
 (lp142
-F1270.0
-aF10.0
+F1410.0
+aF150.0
 asg15
 (itiddlywiki
 Tiddler
 p143
 (dp144
 g19
-VInventory Class goes here\u000a\u000a[[Items |Items]]\u000a[[Market |Market]]\u000a[[Weapons |Weapons]]
+VWeapons class\u000a\u000a\u000a[[Inventory |Inventory]]
 p145
 sg21
-VInventory
+VWeapons
 p146
 sg23
 g24
@@ -451,8 +451,8 @@ g24
 I5
 I22
 I15
-I6
-I21
+I5
+I35
 I3
 I142
 I0
@@ -468,8 +468,8 @@ g24
 I5
 I22
 I15
-I2
-I45
+I3
+I50
 I3
 I142
 I0
@@ -482,7 +482,7 @@ g12
 I00
 sg13
 (lp157
-F1130.0
+F1270.0
 aF150.0
 asg15
 (itiddlywiki
@@ -490,10 +490,10 @@ Tiddler
 p158
 (dp159
 g19
-VItems to be defined\u000a\u000a[[Inventory |Inventory]]
+VMarket Items Class\u000a\u000a[[Inventory |Inventory]]
 p160
 sg21
-VItems
+VMarket
 p161
 sg23
 g24
@@ -502,7 +502,7 @@ I5
 I22
 I15
 I5
-I17
+I28
 I3
 I142
 I0
@@ -518,8 +518,8 @@ g24
 I5
 I22
 I15
-I3
-I30
+I4
+I15
 I3
 I142
 I0
@@ -532,27 +532,27 @@ g12
 I00
 sg13
 (lp172
-F1410.0
-aF150.0
+F710.0
+aF10.0
 asg15
 (itiddlywiki
 Tiddler
 p173
 (dp174
 g19
-VWeapons class\u000a\u000a\u000a[[Inventory |Inventory]]
+VAll Modules should link to this passage to keep things organized\u000a\u000a[[Character |Character]]\u000a[[Inventory |Inventory]]\u000a[[Combat |Combat]]\u000a[[World |World]]\u000a[[Quest |Quest]]\u000a[[Menu |Menu]]
 p175
 sg21
-VWeapons
+VModules
 p176
 sg23
 g24
 ((I2014
 I5
 I22
-I15
-I5
-I35
+I20
+I13
+I39
 I3
 I142
 I0
@@ -568,8 +568,8 @@ g24
 I5
 I22
 I15
-I3
-I50
+I10
+I12
 I3
 I142
 I0
@@ -582,7 +582,7 @@ g12
 I00
 sg13
 (lp187
-F1270.0
+F150.0
 aF150.0
 asg15
 (itiddlywiki
@@ -590,19 +590,19 @@ Tiddler
 p188
 (dp189
 g19
-VMarket Items Class\u000a\u000a[[Inventory |Inventory]]
+VThese will be placed throughout the world.
 p190
 sg21
-VMarket
+VNPC
 p191
 sg23
 g24
 ((I2014
 I5
 I22
-I15
-I5
-I28
+I19
+I56
+I31
 I3
 I142
 I0
@@ -617,9 +617,9 @@ g24
 ((I2014
 I5
 I22
-I15
-I4
-I15
+I19
+I55
+I58
 I3
 I142
 I0
@@ -632,27 +632,27 @@ g12
 I00
 sg13
 (lp202
-F710.0
-aF10.0
+F150.0
+aF430.0
 asg15
 (itiddlywiki
 Tiddler
 p203
 (dp204
 g19
-VAll Modules should link to this passage to keep things organized\u000a\u000a[[Character |Character]]\u000a[[Inventory |Inventory]]
+VThis will handle all of the combat in the game\u000a\u000a[[PlayerVsEnemy |PlayerVsEnemy]]\u000a[[MiniBoss |MiniBoss]]\u000a[[CombatLoot |CombatLoot]]
 p205
 sg21
-VModules
+VCombat
 p206
 sg23
 g24
 ((I2014
 I5
 I22
-I15
-I11
-I16
+I20
+I4
+I21
 I3
 I142
 I0
@@ -667,9 +667,9 @@ g24
 ((I2014
 I5
 I22
-I15
-I10
-I12
+I19
+I58
+I16
 I3
 I142
 I0
@@ -677,10 +677,410 @@ tp212
 (dp213
 tp214
 Rp215
+sbsa(dp216
+g12
+I00
+sg13
+(lp217
+F1270.0
+aF430.0
+asg15
+(itiddlywiki
+Tiddler
+p218
+(dp219
+g19
+VAll Levels will be defined here\u000a[[WorldLevels |WorldLevels]]\u000a[[WorldLoot |WorldLoot]]
+p220
+sg21
+VWorld
+p221
+sg23
+g24
+((I2014
+I5
+I22
+I20
+I6
+I52
+I3
+I142
+I0
+tp222
+(dp223
+tp224
+Rp225
+sg29
+(lp226
+sg31
+g24
+((I2014
+I5
+I22
+I19
+I59
+I31
+I3
+I142
+I0
+tp227
+(dp228
+tp229
+Rp230
+sbsa(dp231
+g12
+I00
+sg13
+(lp232
+F10.0
+aF570.0
+asg15
+(itiddlywiki
+Tiddler
+p233
+(dp234
+g19
+VThe player versus enemy combat sequence
+p235
+sg21
+VPlayerVsEnemy
+p236
+sg23
+g24
+((I2014
+I5
+I22
+I20
+I1
+I41
+I3
+I142
+I0
+tp237
+(dp238
+tp239
+Rp240
+sg29
+(lp241
+sg31
+g24
+((I2014
+I5
+I22
+I20
+I1
+I8
+I3
+I142
+I0
+tp242
+(dp243
+tp244
+Rp245
+sbsa(dp246
+g12
+I00
+sg13
+(lp247
+F290.0
+aF570.0
+asg15
+(itiddlywiki
+Tiddler
+p248
+(dp249
+g19
+VMini Boss Battle Sequence
+p250
+sg21
+VMiniBoss
+p251
+sg23
+g24
+((I2014
+I5
+I22
+I20
+I2
+I55
+I3
+I142
+I0
+tp252
+(dp253
+tp254
+Rp255
+sg29
+(lp256
+sg31
+g24
+((I2014
+I5
+I22
+I20
+I2
+I34
+I3
+I142
+I0
+tp257
+(dp258
+tp259
+Rp260
+sbsa(dp261
+g12
+I00
+sg13
+(lp262
+F150.0
+aF570.0
+asg15
+(itiddlywiki
+Tiddler
+p263
+(dp264
+g19
+VLoot drops from battles
+p265
+sg21
+VCombatLoot
+p266
+sg23
+g24
+((I2014
+I5
+I22
+I20
+I3
+I59
+I3
+I142
+I0
+tp267
+(dp268
+tp269
+Rp270
+sg29
+(lp271
+sg31
+g24
+((I2014
+I5
+I22
+I20
+I3
+I46
+I3
+I142
+I0
+tp272
+(dp273
+tp274
+Rp275
+sbsa(dp276
+g12
+I00
+sg13
+(lp277
+F1410.0
+aF570.0
+asg15
+(itiddlywiki
+Tiddler
+p278
+(dp279
+g19
+VWorld Levels will be seperated by levels. Player must be a certain level to enter certain levels
+p280
+sg21
+VWorldLevels
+p281
+sg23
+g24
+((I2014
+I5
+I22
+I20
+I5
+I34
+I3
+I142
+I0
+tp282
+(dp283
+tp284
+Rp285
+sg29
+(lp286
+sg31
+g24
+((I2014
+I5
+I22
+I20
+I4
+I51
+I3
+I142
+I0
+tp287
+(dp288
+tp289
+Rp290
+sbsa(dp291
+g12
+I00
+sg13
+(lp292
+F1130.0
+aF570.0
+asg15
+(itiddlywiki
+Tiddler
+p293
+(dp294
+g19
+VWorld Loot Drops
+p295
+sg21
+VWorldLoot
+p296
+sg23
+g24
+((I2014
+I5
+I22
+I20
+I6
+I23
+I3
+I142
+I0
+tp297
+(dp298
+tp299
+Rp300
+sg29
+(lp301
+sg31
+g24
+((I2014
+I5
+I22
+I20
+I6
+I9
+I3
+I142
+I0
+tp302
+(dp303
+tp304
+Rp305
+sbsa(dp306
+g12
+I00
+sg13
+(lp307
+F430.0
+aF430.0
+asg15
+(itiddlywiki
+Tiddler
+p308
+(dp309
+g19
+VQuest will reward the player with gold, experience and useful items
+p310
+sg21
+VQuest
+p311
+sg23
+g24
+((I2014
+I5
+I22
+I20
+I9
+I32
+I3
+I142
+I0
+tp312
+(dp313
+tp314
+Rp315
+sg29
+(lp316
+sg31
+g24
+((I2014
+I5
+I22
+I20
+I8
+I50
+I3
+I142
+I0
+tp317
+(dp318
+tp319
+Rp320
+sbsa(dp321
+g12
+I00
+sg13
+(lp322
+F710.0
+aF430.0
+asg15
+(itiddlywiki
+Tiddler
+p323
+(dp324
+g19
+VAll Menu Systems will be in this module
+p325
+sg21
+VMenu
+p326
+sg23
+g24
+((I2014
+I5
+I22
+I20
+I13
+I20
+I3
+I142
+I0
+tp327
+(dp328
+tp329
+Rp330
+sg29
+(lp331
+sg31
+g24
+((I2014
+I5
+I22
+I20
+I13
+I4
+I3
+I142
+I0
+tp332
+(dp333
+tp334
+Rp335
 sbsasS'scale'
-p216
+p336
 F0.8
 sS'snapping'
-p217
+p337
 I01
 ss.
